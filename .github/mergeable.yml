@@ -1,0 +1,8 @@
+version: 2
+mergeable:
+  - when: pull_request.*
+    validate:
+      - do: milestone
+        must_include:
+          regex: Release 1
+          
