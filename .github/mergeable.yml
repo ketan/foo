@@ -3,6 +3,6 @@ mergeable:
   - when: pull_request.*
     validate:
       - do: milestone
-        must_include:
-          regex: Release 1
-          
+        no_empty:
+          enabled: true
+          message: "Milestone must be specified"
